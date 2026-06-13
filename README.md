@@ -253,4 +253,4 @@ Distributed under the ISC License. See LICENSE file for more information.
 
 ---
 
-Built with ❤️ by Monisha Devadiga – A DBMS Project for the Database Systems Course
+Built by Monisha Devadiga – A DBMS Project for the Database Systems Course
