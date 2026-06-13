@@ -1,5 +1,3 @@
-# PayrollMaster – Employee Payroll Management System
-
 A Full-Stack DBMS Project with Real-Time Payroll Calculation, Stored Procedures, Triggers & Advanced SQL Queries
 
 ![PHP](https://img.shields.io/badge/PHP-8.0-777BB4?style=flat&logo=php&logoColor=white)
@@ -51,6 +49,13 @@ graph TB
     DB_CONN -->|SQL| TABLES
     DB_CONN -->|CALL| PROCS
     TABLES -->|Fire| TRIGGERS
+```
+
+---
+
+📊 Entity‑Relationship Diagram
+
+```mermaid
 erDiagram
     DEPARTMENT ||--o{ EMPLOYEE : has
     EMPLOYEE ||--o{ ATTENDANCE : records
@@ -97,6 +102,13 @@ erDiagram
         decimal amount
         date payment_date
     }
+```
+
+---
+
+🔁 Payroll Lifecycle Flowchart
+
+```mermaid
 flowchart TD
     A[Employee Joins] --> B[Add to Employee Table]
     B --> C[Record Attendance Monthly]
@@ -110,13 +122,27 @@ flowchart TD
 
     style D fill:#fef3c7,stroke:#f59e0b
     style G fill:#dbeafe,stroke:#3b82f6
+```
+
+---
+
+📜 Stored Procedures & Triggers
+
+Stored Procedures
+
 Procedure Name Parameters Description
 CalculatePayroll emp_id, basic, bonus, deduction, salary_date Computes net salary and inserts into Payroll table
 GetSalaryReport emp_id Returns itemised payslip (basic, bonus, deduction, net)
+
+Triggers
+
 Trigger Name Event Action
 AfterAttendanceUpdate AFTER UPDATE ON Attendance Recalculates deduction = leave_days * 500 and updates Payroll.net_salary
 BeforePayrollInsert BEFORE INSERT ON Payroll Blocks duplicate payroll for same employee & month (SQLSTATE 45000)
-The 10 Advanced SQL Queries
+
+---
+
+🔟 The 10 Advanced SQL Queries
 
 # Query Description SQL Concepts Used
 1 List all employees with their departments INNER JOIN
@@ -227,4 +253,4 @@ Distributed under the ISC License. See LICENSE file for more information.
 
 ---
 
-Built by Monisha Devadiga – A DBMS Project for the Database Systems Course
+Built with ❤️ by Monisha Devadiga – A DBMS Project for the Database Systems Course
