@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Ravi",
+    "department": "IT",
+    "position": "Developer",
+    "salary": 50000,
+    "email": "ravi@company.com",
+    "phone": "9876543210",
+    "joinDate": "2023-01-15"
+  },
+  {
+    "id": 2,
+    "name": "Anu",
+    "department": "HR",
+    "position": "Manager",
+    "salary": 60000,
+    "email": "anu@company.com",
+    "phone": "9876543211",
+    "joinDate": "2023-02-20"
+  },
+  {
+    "id": 3,
+    "name": "Kiran",
+    "department": "Finance",
+    "position": "Analyst",
+    "salary": 55000,
+    "email": "kiran@company.com",
+    "phone": "9876543212",
+    "joinDate": "2023-03-10"
+  },
+  {
+    "id": 4,
+    "name": "Suresh",
+    "department": "IT",
+    "position": "Tester",
+    "salary": 45000,
+    "email": "suresh@company.com",
+    "phone": "9876543213",
+    "joinDate": "2023-04-05"
+  },
+  {
+    "id": 5,
+    "name": "Priya",
+    "department": "Marketing",
+    "position": "Executive",
+    "salary": 48000,
+    "email": "priya@company.com",
+    "phone": "9876543214",
+    "joinDate": "2023-05-12"
+  }
+]
