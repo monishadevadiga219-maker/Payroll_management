@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "employeeId": 1,
+    "basicSalary": 50000,
+    "bonus": 5000,
+    "deductions": 2000,
+    "netSalary": 53000,
+    "month": "2024-01",
+    "attendance": 22,
+    "leaveDays": 2
+  },
+  {
+    "id": 2,
+    "employeeId": 2,
+    "basicSalary": 60000,
+    "bonus": 4000,
+    "deductions": 1000,
+    "netSalary": 63000,
+    "month": "2024-01",
+    "attendance": 23,
+    "leaveDays": 1
+  },
+  {
+    "id": 3,
+    "employeeId": 3,
+    "basicSalary": 55000,
+    "bonus": 3000,
+    "deductions": 1500,
+    "netSalary": 56500,
+    "month": "2024-01",
+    "attendance": 21,
+    "leaveDays": 3
+  },
+  {
+    "id": 4,
+    "employeeId": 4,
+    "basicSalary": 45000,
+    "bonus": 2000,
+    "deductions": 1000,
+    "netSalary": 46000,
+    "month": "2024-01",
+    "attendance": 24,
+    "leaveDays": 0
+  },
+  {
+    "id": 5,
+    "employeeId": 5,
+    "basicSalary": 48000,
+    "bonus": 2000,
+    "deductions": 1000,
+    "netSalary": 49000,
+    "month": "2024-01",
+    "attendance": 22,
+    "leaveDays": 2
+  }
+]
