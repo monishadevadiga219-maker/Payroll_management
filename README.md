@@ -1,5 +1,3 @@
-# 🧾 PayrollMaster – Complete Payroll Management System
-
 A **production-ready** Full-Stack Payroll Management System with Employee Management, Payroll Processing, Stored Procedures, Triggers, and 10 Advanced SQL Queries.
 
 ![Express.js](https://img.shields.io/badge/Express.js-5.x-000000?style=flat&logo=express&logoColor=white)
@@ -47,6 +45,17 @@ graph TB
         EMP["employee.json"]
         PAY["payroll.json"]
     end
+
+    UI --> API
+    API --> EMP
+    API --> PAY
+```
+
+---
+
+📊 Entity-Relationship Diagram
+
+```mermaid
 erDiagram
     EMPLOYEE ||--o{ PAYROLL : has
 
@@ -72,6 +81,13 @@ erDiagram
         int attendance
         int leaveDays
     }
+```
+
+---
+
+🔁 Payroll Lifecycle Flowchart
+
+```mermaid
 flowchart TD
     A[Employee Joins] --> B[Add to Employee Table]
     B --> C[Record Monthly Attendance]
@@ -85,72 +101,107 @@ flowchart TD
     style D fill:#fef3c7,stroke:#f59e0b
     style E fill:#d1fae5,stroke:#10b981
     style H fill:#dbeafe,stroke:#3b82f6
+```
+
+---
+
 📜 Stored Procedures & Triggers
+
 Stored Procedures
-Procedure Name	Parameters	Description
-CalculateSalary(emp_id, month)	Employee ID, Month	Calculates net salary and returns payroll details
-GeneratePayslip(emp_id, month)	Employee ID, Month	Generates printable payslip HTML
+
+Procedure Name Parameters Description
+CalculateSalary(emp_id, month) Employee ID, Month Calculates net salary and returns payroll details
+GeneratePayslip(emp_id, month) Employee ID, Month Generates printable payslip HTML
+
 Triggers
-Trigger Name	Event	Action
-AfterAttendanceUpdate	AFTER UPDATE ON Attendance	Auto-recalculates salary based on attendance
-BeforeLeaveInsert	BEFORE INSERT ON Leave	Blocks leave request if total > 5 days in a month
+
+Trigger Name Event Action
+AfterAttendanceUpdate AFTER UPDATE ON Attendance Auto-recalculates salary based on attendance
+BeforeLeaveInsert BEFORE INSERT ON Leave Blocks leave request if total > 5 days in a month
+
+---
+
 🔟 The 10 Advanced SQL Queries
-#	Query Description	SQL Concepts
-1	Retrieve all employees	SELECT *
-2	Employees by department	WHERE clause
-3	Employee + Salary (INNER JOIN)	INNER JOIN
-4	Full details with payroll (3 tables)	Multiple JOINS
-5	Count employees per department	COUNT, GROUP BY
-6	Departments with avg salary > 50000	AVG, HAVING
-7	Employees above average salary	Subquery
-8	Employees earning more than specific employee	Self-join
-9	Employees with/without salary (LEFT JOIN)	LEFT JOIN, IS NULL
-10	Departments with no employees	NOT EXISTS
+
+# Query Description SQL Concepts
+1 Retrieve all employees SELECT * 
+2 Employees by department WHERE clause
+3 Employee + Salary (INNER JOIN) INNER JOIN
+4 Full details with payroll (3 tables) Multiple JOINS
+5 Count employees per department COUNT, GROUP BY
+6 Departments with avg salary > 50000 AVG, HAVING
+7 Employees above average salary Subquery
+8 Employees earning more than specific employee Self-join
+9 Employees with/without salary (LEFT JOIN) LEFT JOIN, IS NULL
+10 Departments with no employees NOT EXISTS
+
 (All queries are runnable from the SQL Queries tab in the UI)
 
-🚀 Quick Start Guide
-Prerequisites
-Node.js v18+ and npm
+---
 
-Modern web browser
+🚀 Quick Start Guide
+
+Prerequisites
+
+· Node.js v18+ and npm
+· Modern web browser
 
 Step 1 – Install Backend Dependencies
+
+```bash
 cd backend
 npm install
+```
+
 Step 2 – Start the Backend Server
+
+```bash
 npm start
 # OR
 node server.js
+```
+
 ✅ Expected: 🚀 Backend server running on http://localhost:5000
 
 Step 3 – Start the Frontend
+
 Simply open frontend/index.html in your browser
 OR use Live Server extension in VS Code
 
+---
+
 🧪 Testing Triggers (Demo)
+
 Trigger 1 – Auto Salary Update
-Go to Triggers tab
 
-Enter Employee ID and month
-
-Update attendance days
-
-Net salary recalculates automatically
+1. Go to Triggers tab
+2. Enter Employee ID and month
+3. Update attendance days
+4. Net salary recalculates automatically
 
 Trigger 2 – Leave Request Block
-Go to Triggers tab
 
-Request more than 5 days of leave
+1. Go to Triggers tab
+2. Request more than 5 days of leave
+3. Trigger blocks the request with error message
 
-Trigger blocks the request with error message
+---
 
 🎨 Tech Stack Summary
+
+```mermaid
 pie title Technology Distribution
     "Express.js (Backend)" : 25
     "Frontend (HTML/CSS/JS)" : 40
     "JSON Storage" : 15
     "Node.js Runtime" : 20
+```
+
+---
+
 📁 Project Structure
+
+```
 Payroll_management/
 ├── frontend/
 │   ├── index.html      # Main UI
@@ -164,22 +215,24 @@ Payroll_management/
 │   ├── employee.json   # Employee data storage
 │   └── payroll.json    # Payroll data storage
 └── README.md
+```
+
+---
+
 🤝 Contributing
-Fork the repository
 
-Create a feature branch (git checkout -b feature/amazing-feature)
+1. Fork the repository
+2. Create a feature branch (git checkout -b feature/amazing-feature)
+3. Commit changes (git commit -m 'Add amazing feature')
+4. Push to branch (git push origin feature/amazing-feature)
+5. Open a Pull Request
 
-Commit changes (git commit -m 'Add amazing feature')
-
-Push to branch (git push origin feature/amazing-feature)
-
-Open a Pull Request
+---
 
 📄 License
+
 Distributed under the ISC License.
 
-Built with by Monisha Devadiga – A Complete DBMS & Full-Stack Project
+---
 
-    UI -->|Fetch/AJAX| API
-    API -->|Read/Write| EMP
-    API -->|Read/Write| PAY
+Built with by Monisha Devadiga – A Complete DBMS & Full-Stack Project
