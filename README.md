@@ -10,6 +10,7 @@ A **production-ready** Full-Stack Payroll Management System with Employee Manage
 ![License](https://img.shields.io/badge/License-ISC-blue)
 
 ---
+
 ## 🏠 Feature Highlights
 
 | Category | Features |
@@ -84,6 +85,7 @@ flowchart TD
     style D fill:#fef3c7,stroke:#f59e0b
     style E fill:#d1fae5,stroke:#10b981
     style H fill:#dbeafe,stroke:#3b82f6
+📜 Stored Procedures & Triggers
 Stored Procedures
 Procedure Name	Parameters	Description
 CalculateSalary(emp_id, month)	Employee ID, Month	Calculates net salary and returns payroll details
@@ -113,11 +115,9 @@ Node.js v18+ and npm
 Modern web browser
 
 Step 1 – Install Backend Dependencies
-bash
 cd backend
 npm install
 Step 2 – Start the Backend Server
-bash
 npm start
 # OR
 node server.js
@@ -143,11 +143,14 @@ Go to Triggers tab
 Request more than 5 days of leave
 
 Trigger blocks the request with error message
+
+🎨 Tech Stack Summary
 pie title Technology Distribution
     "Express.js (Backend)" : 25
     "Frontend (HTML/CSS/JS)" : 40
     "JSON Storage" : 15
     "Node.js Runtime" : 20
+📁 Project Structure
 Payroll_management/
 ├── frontend/
 │   ├── index.html      # Main UI
@@ -175,8 +178,7 @@ Open a Pull Request
 📄 License
 Distributed under the ISC License.
 
-Built with by Monisha Devadiga – A Complete DBMS & Full-Stack Project text
-
+Built with by Monisha Devadiga – A Complete DBMS & Full-Stack Project
 
     UI -->|Fetch/AJAX| API
     API -->|Read/Write| EMP
