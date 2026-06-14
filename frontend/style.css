@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    margin-bottom: 5px;
+}
+
+.backend-status {
+    color: #28a745;
+    font-size: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.nav-btn:hover {
+    background: #ddd;
+}
+
+.nav-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+.tab {
+    display: none;
+    animation: fadeIn 0.3s;
+}
+
+.tab.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-add {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-add:hover {
+    background: #218838;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f8f9fa;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+tr:hover {
+    background: #f5f5f5;
+}
+
+button {
+    padding: 5px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-edit {
+    background: #ffc107;
+    color: #000;
+}
+
+.btn-edit:hover {
+    background: #e0a800;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #c82333;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    animation: fadeIn 0.2s;
+}
+
+.modal-content {
+    background: white;
+    margin: 50px auto;
+    padding: 30px;
+    width: 450px;
+    border-radius: 10px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal-content input, .modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.queries-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.queries-list button {
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    font-size: 14px;
+}
+
+.queries-list button:hover {
+    background: #5a67d8;
+}
+
+.result-area, .proc-card, .trigger-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.proc-card, .trigger-card {
+    margin-bottom: 25px;
+}
+
+.proc-card h3, .trigger-card h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.proc-card input, .trigger-card input {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(33% - 10px);
+}
+
+.trigger-card input {
+    width: calc(25% - 10px);
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.result-table th, .result-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-size: 13px;
+}
+
+.payslip {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+#searchEmp {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .queries-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .proc-card input, .trigger-card input {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+}
