@@ -10,15 +10,6 @@ A **production-ready** Full-Stack Payroll Management System with Employee Manage
 ![License](https://img.shields.io/badge/License-ISC-blue)
 
 ---
-
-## 📸 Live Preview
-
-| Dashboard | Employee Management | Payroll Processing |
-|-----------|---------------------|---------------------|
-| ![Dashboard](https://via.placeholder.com/400x200?text=Dashboard) | ![Employees](https://via.placeholder.com/400x200?text=Employees) | ![Payroll](https://via.placeholder.com/400x200?text=Payroll) |
-
----
-
 ## 🏠 Feature Highlights
 
 | Category | Features |
